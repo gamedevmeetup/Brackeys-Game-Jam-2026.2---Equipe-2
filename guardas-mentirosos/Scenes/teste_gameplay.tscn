@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cdlr7m4nqp1a3"]
+
+[node name="TesteGameplay" type="Node2D" unique_id=387510929]
+
+[node name="Background" type="ColorRect" parent="." unique_id=1122180434]
+offset_right = 1150.0
+offset_bottom = 645.0
+
+[node name="QuestionPanel" type="Panel" parent="." unique_id=2086466157]
+offset_left = 60.0
+offset_top = 55.0
+offset_right = 403.0
+offset_bottom = 290.0
+
+[node name="QuestionLabel" type="Label" parent="QuestionPanel" unique_id=500146349]
+layout_mode = 0
+offset_right = 342.0
+offset_bottom = 233.0
