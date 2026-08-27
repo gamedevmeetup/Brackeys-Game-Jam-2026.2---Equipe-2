@@ -12,6 +12,9 @@ bg_color = Color(0.99215686, 0.81960785, 0.023529412, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_212wd"]
 bg_color = Color(0.015686275, 0.6666667, 1, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e1q4p"]
+bg_color = Color(1, 1, 1, 1)
+
 [node name="TesteGameplay" type="Control" unique_id=460679381]
 layout_mode = 3
 anchors_preset = 0
@@ -138,10 +141,10 @@ metadata/_edit_use_anchors_ = true
 
 [node name="GuardRight" type="Button" parent="." unique_id=1027485856]
 layout_mode = 0
-offset_left = 1238.0
-offset_top = 532.0
-offset_right = 1535.0
-offset_bottom = 797.0
+offset_left = 1223.0
+offset_top = 555.0
+offset_right = 1520.0
+offset_bottom = 820.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 31
 theme_override_styles/normal = SubResource("StyleBoxFlat_212wd")
@@ -184,9 +187,51 @@ theme_override_font_sizes/font_size = 31
 theme_override_styles/normal = SubResource("StyleBoxFlat_212wd")
 text = "Guarda Esquerdo"
 
+[node name="SpeechBubbleLeft" type="Panel" parent="." unique_id=1465295520]
+visible = false
+layout_mode = 0
+offset_left = 225.0
+offset_top = 298.0
+offset_right = 616.0
+offset_bottom = 545.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_e1q4p")
+
+[node name="AnswerLabelLeft" type="Label" parent="SpeechBubbleLeft" unique_id=184296389]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 88.0
+offset_right = 356.0
+offset_bottom = 120.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 23
+text = "	Resposta do Guarda Esquerdo"
+
+[node name="SpeechBubbleRight" type="Panel" parent="." unique_id=150937521]
+visible = false
+layout_mode = 0
+offset_left = 1466.0
+offset_top = 298.0
+offset_right = 1857.0
+offset_bottom = 545.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_e1q4p")
+
+[node name="AnswerLabelRight" type="Label" parent="SpeechBubbleRight" unique_id=829189457]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 88.0
+offset_right = 356.0
+offset_bottom = 120.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 23
+text = "	Resposta do Guarda Direito"
+
 [connection signal="doorConfirmed" from="DoorRight" to="." method="_on_door_right_door_confirmed"]
 [connection signal="mouse_entered" from="DoorRight" to="DoorRight" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="DoorRight" to="DoorRight" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="GuardRight" to="." method="_on_guard_right_mouse_entered"]
+[connection signal="mouse_exited" from="GuardRight" to="." method="_on_guard_right_mouse_exited"]
 [connection signal="doorConfirmed" from="DoorLeft" to="." method="_on_door_left_door_confirmed"]
 [connection signal="mouse_entered" from="DoorLeft" to="DoorLeft" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="DoorLeft" to="DoorLeft" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="GuardLeft" to="." method="_on_guard_left_mouse_entered"]
+[connection signal="mouse_exited" from="GuardLeft" to="." method="_on_guard_left_mouse_exited"]

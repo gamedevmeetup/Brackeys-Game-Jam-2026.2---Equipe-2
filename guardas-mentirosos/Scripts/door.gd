@@ -1,6 +1,6 @@
 extends Button
 
-signal doorConfirmed
+signal doorConfirmed(door)
 
 @export var holdTime: float = 2.0
 
@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 
 		if hoverTime >= holdTime:
 			confirmed = true
-			doorConfirmed.emit()
+			doorConfirmed.emit(self)
 
 
 func _on_mouse_entered() -> void:
