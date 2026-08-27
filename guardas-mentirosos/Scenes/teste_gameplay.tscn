@@ -5,14 +5,75 @@
 [node name="Background" type="ColorRect" parent="." unique_id=1122180434]
 offset_right = 1150.0
 offset_bottom = 645.0
+color = Color(0.19219694, 0.19219697, 0.19219697, 1)
 
 [node name="QuestionPanel" type="Panel" parent="." unique_id=2086466157]
-offset_left = 60.0
-offset_top = 55.0
-offset_right = 403.0
-offset_bottom = 290.0
+offset_left = 191.0
+offset_top = 77.0
+offset_right = 963.0
+offset_bottom = 179.0
 
 [node name="QuestionLabel" type="Label" parent="QuestionPanel" unique_id=500146349]
 layout_mode = 0
-offset_right = 342.0
-offset_bottom = 233.0
+offset_left = 29.0
+offset_top = 42.0
+offset_right = 735.0
+offset_bottom = 65.0
+text = "Pergunta: Se eu perguntasse ao outro guarda qual porta leva ao tesouro, qual ele indicaria?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="QuestionsPanel" type="Panel" parent="." unique_id=878460869]
+offset_left = 1.0
+offset_top = 489.0
+offset_right = 217.0
+offset_bottom = 642.0
+
+[node name="Label" type="Label" parent="QuestionsPanel" unique_id=1325424966]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 9.0
+offset_right = 190.0
+offset_bottom = 34.0
+text = "Escolha uma pergunta:"
+
+[node name="QuestionButton1" type="Button" parent="QuestionsPanel" unique_id=1844352542]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 42.0
+offset_right = 188.0
+offset_bottom = 66.0
+theme_override_font_sizes/font_size = 8
+text = "O que seu colega responderia?"
+
+[node name="QuestionButton2" type="Button" parent="QuestionsPanel" unique_id=70120136]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 78.0
+offset_right = 188.0
+offset_bottom = 102.0
+theme_override_font_sizes/font_size = 8
+text = "Qual porta seu colega indicaria?"
+
+[node name="QuestionButton3" type="Button" parent="QuestionsPanel" unique_id=528616766]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 115.0
+offset_right = 189.0
+offset_bottom = 139.0
+theme_override_font_sizes/font_size = 8
+text = "Seu colega diria que a porta A é segura?"
+
+[node name="GuardLeft" type="Button" parent="." unique_id=799014368]
+offset_left = 181.0
+offset_top = 286.0
+offset_right = 373.0
+offset_bottom = 450.0
+text = "Guarda Esquerda"
+
+[node name="GuardRight" type="Button" parent="." unique_id=146947788]
+offset_left = 777.0
+offset_top = 285.0
+offset_right = 969.0
+offset_bottom = 449.0
+text = "Guarda Direita"
