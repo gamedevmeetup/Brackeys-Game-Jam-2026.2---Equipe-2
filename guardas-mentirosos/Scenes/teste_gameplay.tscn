@@ -225,6 +225,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 23
 text = "	Resposta do Guarda Direito"
 
+[connection signal="pressed" from="QuestionsPanel/QuestionButton1" to="." method="_on_question_button_1_pressed"]
 [connection signal="doorConfirmed" from="DoorRight" to="." method="_on_door_right_door_confirmed"]
 [connection signal="mouse_entered" from="DoorRight" to="DoorRight" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="DoorRight" to="DoorRight" method="_on_mouse_exited"]
