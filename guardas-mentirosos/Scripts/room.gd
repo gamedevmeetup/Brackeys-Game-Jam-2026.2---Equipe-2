@@ -3,6 +3,7 @@ extends Control
 var correctDoor = "DoorLeft"
 var truthGuard = "GuardLeft"
 var selectedQuestion = 0
+var questionAsked = false
 
 func _ready() -> void:
 	$DoorLeft.disabled = true
@@ -11,6 +12,10 @@ func _ready() -> void:
 	$DoorRight/ProgressBar.value = 0
 
 func select_question(questionNumber: int) -> void:
+	if questionAsked:
+			return
+	
+	questionAsked = true
 	selectedQuestion = questionNumber
 	match selectedQuestion:
 		1:
@@ -33,26 +38,19 @@ func select_question(questionNumber: int) -> void:
 			
 	$DoorLeft.disabled = false
 	$DoorRight.disabled = false
+	
 	$DoorLeft/ProgressBar.value = 0
 	$DoorRight/ProgressBar.value = 0
+	
+	$QuestionsPanel/QuestionButton1.disabled = true
+	$QuestionsPanel/QuestionButton2.disabled = true
+	$QuestionsPanel/QuestionButton3.disabled = true
 
 func _on_door_left_door_confirmed(door) -> void:
 	print("PORTA ESCOLHIDA: ", door.name)
 
 func _on_door_right_door_confirmed(door) -> void:
 	print("PORTA ESCOLHIDA: ", door.name)
-
-func _on_guard_right_mouse_entered() -> void:
-	$SpeechBubbleRight.show()
-
-func _on_guard_right_mouse_exited() -> void:
-	$SpeechBubbleRight.hide()
-
-func _on_guard_left_mouse_entered() -> void:
-	$SpeechBubbleLeft.show()
-
-func _on_guard_left_mouse_exited() -> void:
-	$SpeechBubbleLeft.hide()
 
 func _on_question_button_1_pressed() -> void:
 	select_question(1)
