@@ -4,21 +4,37 @@ var correctDoor = "DoorLeft"
 var truthGuard = "GuardLeft"
 var selectedQuestion = 0
 
+func _ready() -> void:
+	$DoorLeft.disabled = true
+	$DoorRight.disabled = true
+	$DoorLeft/ProgressBar.value = 0
+	$DoorRight/ProgressBar.value = 0
 
 func select_question(questionNumber: int) -> void:
 	selectedQuestion = questionNumber
 	match selectedQuestion:
 		1:
-			$SpeechBubbleLeft/AnswerLabelLeft.text = "Ele indicaria a porta B."
-			$SpeechBubbleRight/AnswerLabelRight.text = "Ele indicaria a porta B."
+			$QuestionPanel/QuestionLabel.text = "Se eu perguntasse ao outro guarda qual porta leva ao tesouro, qual ele indicaria?"
+			
+			$SpeechBubbleLeft/AnswerLabelLeft.text = "Ele indicaria a porta direita."
+			$SpeechBubbleRight/AnswerLabelRight.text = "Ele indicaria a porta direita."
 
 		2:
-			$SpeechBubbleLeft/AnswerLabelLeft.text = "Ele indicaria a porta A."
-			$SpeechBubbleRight/AnswerLabelRight.text = "Ele indicaria a porta A."
+			$QuestionPanel/QuestionLabel.text = "Seu colega diria que a porta esquerda leva ao tesouro?"
+		
+			$SpeechBubbleLeft/AnswerLabelLeft.text = "Ele indicaria a porta direita."
+			$SpeechBubbleRight/AnswerLabelRight.text = "Ele indicaria a porta direita."
 
 		3:
+			$QuestionPanel/QuestionLabel.text = "Seu colega diria que a porta esquerda leva ao tesouro?"
+			
 			$SpeechBubbleLeft/AnswerLabelLeft.text = "Sim."
 			$SpeechBubbleRight/AnswerLabelRight.text = "Não."
+			
+	$DoorLeft.disabled = false
+	$DoorRight.disabled = false
+	$DoorLeft/ProgressBar.value = 0
+	$DoorRight/ProgressBar.value = 0
 
 func _on_door_left_door_confirmed(door) -> void:
 	print("PORTA ESCOLHIDA: ", door.name)

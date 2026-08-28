@@ -12,7 +12,7 @@ var confirmed: bool = false
 
 func _process(delta: float) -> void:
 
-	if isHovering and not confirmed:
+	if isHovering and not confirmed and not disabled:
 		hoverTime += delta
 		$ProgressBar.value = (hoverTime / holdTime) * 100.0
 		if hoverTime >= holdTime:
