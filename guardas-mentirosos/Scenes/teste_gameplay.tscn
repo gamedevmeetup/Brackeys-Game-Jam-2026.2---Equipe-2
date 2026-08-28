@@ -2,7 +2,11 @@
 
 [ext_resource type="Script" uid="uid://dfgcq16qoxm5b" path="res://Scripts/room.gd" id="1_212wd"]
 [ext_resource type="Script" uid="uid://dbjvraml4ukps" path="res://Scripts/door.gd" id="1_l5545"]
+[ext_resource type="Script" uid="uid://dh32rvjjscqxg" path="res://Scripts/question_data.gd" id="2_uibj0"]
+[ext_resource type="Resource" uid="uid://tsykmx7v02kw" path="res://Data/Questions/question_01.tres" id="3_b44lb"]
 [ext_resource type="Script" uid="uid://17nc33sjhqee" path="res://Scripts/guard.gd" id="3_e1q4p"]
+[ext_resource type="Resource" uid="uid://dmtdfvmekw1gl" path="res://Data/Questions/question_02.tres" id="4_5lxxv"]
+[ext_resource type="Resource" uid="uid://cc0k8m22y6fjv" path="res://Data/Questions/question_03.tres" id="5_bmlxo"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sdykh"]
 bg_color = Color(1, 1, 1, 1)
@@ -20,6 +24,7 @@ bg_color = Color(1, 1, 1, 1)
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_212wd")
+questions = Array[ExtResource("2_uibj0")]([ExtResource("3_b44lb"), ExtResource("4_5lxxv"), ExtResource("5_bmlxo")])
 
 [node name="Background" type="ColorRect" parent="." unique_id=1269580317]
 layout_mode = 0
@@ -204,10 +209,10 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_e1q4p")
 
 [node name="AnswerLabelLeft" type="Label" parent="SpeechBubbleLeft" unique_id=184296389]
 layout_mode = 0
-offset_left = 22.0
-offset_top = 88.0
+offset_left = 23.0
+offset_top = 116.0
 offset_right = 356.0
-offset_bottom = 120.0
+offset_bottom = 148.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 23
 text = "	Resposta do Guarda Esquerdo"

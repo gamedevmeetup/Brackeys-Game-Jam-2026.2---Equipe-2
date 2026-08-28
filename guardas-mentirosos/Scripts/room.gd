@@ -5,6 +5,8 @@ var truthGuard = "GuardLeft"
 var selectedQuestion = 0
 var questionAsked = false
 
+@export var questions: Array[QuestionData]
+
 func _ready() -> void:
 	$DoorLeft.disabled = true
 	$DoorRight.disabled = true
@@ -13,29 +15,16 @@ func _ready() -> void:
 
 func select_question(questionNumber: int) -> void:
 	if questionAsked:
-			return
+		return
 	
 	questionAsked = true
 	selectedQuestion = questionNumber
-	match selectedQuestion:
-		1:
-			$QuestionPanel/QuestionLabel.text = "Se eu perguntasse ao outro guarda qual porta leva ao tesouro, qual ele indicaria?"
-			
-			$GuardLeft.set_answer("Ele indicaria a porta direita.")
-			$GuardRight.set_answer("Ele indicaria a porta direita.")
-
-		2:
-			$QuestionPanel/QuestionLabel.text = "Seu colega diria que a porta esquerda leva ao tesouro?"
-		
-			$GuardLeft.set_answer("Ele indicaria a porta direita.")
-			$GuardRight.set_answer("Ele indicaria a porta direita.")
-
-		3:
-			$QuestionPanel/QuestionLabel.text = "Seu colega diria que a porta esquerda leva ao tesouro?"
-			
-			$GuardLeft.set_answer("Sim.")
-			$GuardRight.set_answer("Não.")
-			
+	
+	var question = questions[questionNumber - 1]
+	
+	$QuestionPanel/QuestionLabel.text = question.questionText
+	set_guard_answers(question)
+	
 	$DoorLeft.disabled = false
 	$DoorRight.disabled = false
 	
@@ -45,6 +34,14 @@ func select_question(questionNumber: int) -> void:
 	$QuestionsPanel/QuestionButton1.disabled = true
 	$QuestionsPanel/QuestionButton2.disabled = true
 	$QuestionsPanel/QuestionButton3.disabled = true
+
+func set_guard_answers(question: QuestionData) -> void:
+	if truthGuard == "GuardLeft":
+		$GuardLeft.set_answer(question.truthfulAnswer)
+		$GuardRight.set_answer(question.liarAnswer)
+	else:
+		$GuardLeft.set_answer(question.liarAnswer)
+		$GuardRight.set_answer(question.truthfulAnswer)
 
 func _on_door_left_door_confirmed(door) -> void:
 	print("PORTA ESCOLHIDA: ", door.name)

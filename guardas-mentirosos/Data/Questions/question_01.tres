@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuestionData" format=3 uid="uid://tsykmx7v02kw"]
+
+[ext_resource type="Script" uid="uid://dh32rvjjscqxg" path="res://Scripts/question_data.gd" id="1_51e8u"]
+
+[resource]
+script = ExtResource("1_51e8u")
+questionText = "Se eu pedisse um conselho ao seu colega, qual porta ele me mandaria abrir?"
+truthfulAnswer = "Ele diria que é a Porta Esquerda, porque ele é um sádico e quer rir da sua cara quando você voltar caminhando por aqui segurando um cabo de vassoura podre em vez de uma lança."
+liarAnswer = "Ele diria que é a Porta Esquerda, pois ele sempre faz questão de equipar ricamente os nossos nobres visitantes antes que voltem para a saída."
+metadata/_custom_type_script = "uid://dh32rvjjscqxg"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuestionData" format=3 uid="uid://dmtdfvmekw1gl"]
+
+[ext_resource type="Script" uid="uid://dh32rvjjscqxg" path="res://Scripts/question_data.gd" id="1_tyu3f"]
+
+[resource]
+script = ExtResource("1_tyu3f")
+questionText = "Se eu pedisse um conselho a você, qual porta o seu colega diria que você me mandaria abrir?"
+truthfulAnswer = "Ele diria que eu te mandaria para a Esquerda, porque sabe que eu adoro ver o desespero nos olhos de quem vai enfrentar um dragão com uma panela amassada na cabeça."
+liarAnswer = "Ele diria que eu te mandaria para a Direita, porque ele tem inveja do meu bônus de produtividade por ajudar aventureiros indefesos."
+metadata/_custom_type_script = "uid://dh32rvjjscqxg"

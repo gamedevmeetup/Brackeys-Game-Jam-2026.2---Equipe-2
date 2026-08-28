@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuestionData" format=3 uid="uid://cc0k8m22y6fjv"]
+
+[ext_resource type="Script" uid="uid://dh32rvjjscqxg" path="res://Scripts/question_data.gd" id="1_8v5hs"]
+
+[resource]
+script = ExtResource("1_8v5hs")
+questionText = "Se eu perguntasse qual porta é a correta, qual delas o seu colega diria que ele mesmo abriria?"
+truthfulAnswer = "A Esquerda. Lá tem uma bota furada que ele quer usar como vaso de plantas para enfeitar a guarita."
+liarAnswer = "A Direita. Ele adora ostentar armaduras reluzentes e polidas durante o expediente."
+metadata/_custom_type_script = "uid://dh32rvjjscqxg"
