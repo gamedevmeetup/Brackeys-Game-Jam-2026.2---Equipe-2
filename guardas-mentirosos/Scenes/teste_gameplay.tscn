@@ -7,6 +7,8 @@
 [ext_resource type="Script" uid="uid://17nc33sjhqee" path="res://Scripts/guard.gd" id="3_e1q4p"]
 [ext_resource type="Resource" uid="uid://dmtdfvmekw1gl" path="res://Data/Questions/question_02.tres" id="4_5lxxv"]
 [ext_resource type="Resource" uid="uid://cc0k8m22y6fjv" path="res://Data/Questions/question_03.tres" id="5_bmlxo"]
+[ext_resource type="Resource" uid="uid://bb01bre8jvk8w" path="res://Data/Equipment/equipment_good_01.tres" id="6_l7j3s"]
+[ext_resource type="Resource" uid="uid://dr4trlkf7ci7e" path="res://Data/Equipment/equipment_bad_01.tres" id="7_72x1o"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sdykh"]
 bg_color = Color(1, 1, 1, 1)
@@ -25,6 +27,8 @@ layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_212wd")
 questions = Array[ExtResource("2_uibj0")]([ExtResource("3_b44lb"), ExtResource("4_5lxxv"), ExtResource("5_bmlxo")])
+goodEquipment = ExtResource("6_l7j3s")
+badEquipment = ExtResource("7_72x1o")
 
 [node name="Background" type="ColorRect" parent="." unique_id=1269580317]
 layout_mode = 0

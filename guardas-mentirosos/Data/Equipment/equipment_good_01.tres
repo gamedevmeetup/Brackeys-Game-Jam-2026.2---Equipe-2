@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EquipmentData" format=3 uid="uid://bb01bre8jvk8w"]
+
+[ext_resource type="Script" uid="uid://vf18gl203r31" path="res://Scripts/equipment_data.gd" id="1_200dc"]
+
+[resource]
+script = ExtResource("1_200dc")
+equipmentName = "Espada do Reino"
+description = "Uma espada digna de um aventureiro."
+power = 10
+metadata/_custom_type_script = "uid://vf18gl203r31"

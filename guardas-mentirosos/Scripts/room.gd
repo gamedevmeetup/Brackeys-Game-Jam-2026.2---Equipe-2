@@ -6,6 +6,8 @@ var selectedQuestion = 0
 var questionAsked = false
 
 @export var questions: Array[QuestionData]
+@export var goodEquipment: EquipmentData
+@export var badEquipment: EquipmentData
 
 func _ready() -> void:
 	$DoorLeft.disabled = true
@@ -43,11 +45,26 @@ func set_guard_answers(question: QuestionData) -> void:
 		$GuardLeft.set_answer(question.liarAnswer)
 		$GuardRight.set_answer(question.truthfulAnswer)
 
-func _on_door_left_door_confirmed(door) -> void:
+func process_door_choice(door) -> void:
 	print("PORTA ESCOLHIDA: ", door.name)
+	
+	var equipment: EquipmentData
+	
+	if door.name == correctDoor:
+		print("RESULTADO: ACERTOU!")
+		equipment = goodEquipment
+	else:
+		print("RESULTADO: ERROU!")
+		equipment = badEquipment
+	
+	print("EQUIPAMENTO: ", equipment.equipmentName)
+	print("PODER: ", equipment.power)
+
+func _on_door_left_door_confirmed(door) -> void:
+	process_door_choice(door)
 
 func _on_door_right_door_confirmed(door) -> void:
-	print("PORTA ESCOLHIDA: ", door.name)
+	process_door_choice(door)
 
 func _on_question_button_1_pressed() -> void:
 	select_question(1)

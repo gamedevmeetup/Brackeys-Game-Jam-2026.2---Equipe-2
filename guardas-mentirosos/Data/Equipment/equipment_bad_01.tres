@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EquipmentData" format=3 uid="uid://dr4trlkf7ci7e"]
+
+[ext_resource type="Script" uid="uid://vf18gl203r31" path="res://Scripts/equipment_data.gd" id="1_8qmk0"]
+
+[resource]
+script = ExtResource("1_8qmk0")
+equipmentName = "Panela Amassada"
+description = "Tecnicamente protege a cabeça. Provavelmente."
+power = 2
+metadata/_custom_type_script = "uid://vf18gl203r31"
