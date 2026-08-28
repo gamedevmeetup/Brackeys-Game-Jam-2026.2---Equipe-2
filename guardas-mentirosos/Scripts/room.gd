@@ -21,20 +21,20 @@ func select_question(questionNumber: int) -> void:
 		1:
 			$QuestionPanel/QuestionLabel.text = "Se eu perguntasse ao outro guarda qual porta leva ao tesouro, qual ele indicaria?"
 			
-			$SpeechBubbleLeft/AnswerLabelLeft.text = "Ele indicaria a porta direita."
-			$SpeechBubbleRight/AnswerLabelRight.text = "Ele indicaria a porta direita."
+			$GuardLeft.set_answer("Ele indicaria a porta direita.")
+			$GuardRight.set_answer("Ele indicaria a porta direita.")
 
 		2:
 			$QuestionPanel/QuestionLabel.text = "Seu colega diria que a porta esquerda leva ao tesouro?"
 		
-			$SpeechBubbleLeft/AnswerLabelLeft.text = "Ele indicaria a porta direita."
-			$SpeechBubbleRight/AnswerLabelRight.text = "Ele indicaria a porta direita."
+			$GuardLeft.set_answer("Ele indicaria a porta direita.")
+			$GuardRight.set_answer("Ele indicaria a porta direita.")
 
 		3:
 			$QuestionPanel/QuestionLabel.text = "Seu colega diria que a porta esquerda leva ao tesouro?"
 			
-			$SpeechBubbleLeft/AnswerLabelLeft.text = "Sim."
-			$SpeechBubbleRight/AnswerLabelRight.text = "Não."
+			$GuardLeft.set_answer("Sim.")
+			$GuardRight.set_answer("Não.")
 			
 	$DoorLeft.disabled = false
 	$DoorRight.disabled = false
