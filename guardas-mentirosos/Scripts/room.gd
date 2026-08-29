@@ -2,6 +2,7 @@ extends Control
 
 var selectedQuestion = 0
 var questionAsked = false
+var doorChosen = false
 
 @export var roomData: RoomData
 
@@ -47,6 +48,14 @@ func set_guard_answers(question: QuestionData) -> void:
 		$GuardRight.set_answer(question.truthfulAnswer)
 
 func process_door_choice(door) -> void:
+	if doorChosen:
+		return
+	
+	doorChosen = true
+	
+	$DoorLeft.disabled = true
+	$DoorRight.disabled = true
+	
 	print("PORTA ESCOLHIDA: ", door.name)
 	
 	var equipment: EquipmentData
