@@ -8,3 +8,5 @@ class_name RoomData
 
 @export var goodEquipment: EquipmentData
 @export var badEquipment: EquipmentData
+
+@export var nextScene: String

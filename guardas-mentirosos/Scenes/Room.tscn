@@ -1,9 +1,8 @@
 [gd_scene format=3 uid="uid://cdlr7m4nqp1a3"]
 
-[ext_resource type="Script" uid="uid://dfgcq16qoxm5b" path="res://Scripts/room.gd" id="1_212wd"]
-[ext_resource type="Script" uid="uid://dbjvraml4ukps" path="res://Scripts/door.gd" id="1_l5545"]
-[ext_resource type="Resource" uid="uid://183orh5mk4cn" path="res://Data/Rooms/room_01.tres" id="2_uibj0"]
-[ext_resource type="Script" uid="uid://17nc33sjhqee" path="res://Scripts/guard.gd" id="3_e1q4p"]
+[ext_resource type="Script" uid="uid://dfgcq16qoxm5b" path="res://Scripts/room.gd" id="1_uj218"]
+[ext_resource type="Script" uid="uid://dbjvraml4ukps" path="res://Scripts/door.gd" id="2_a2si3"]
+[ext_resource type="Script" uid="uid://17nc33sjhqee" path="res://Scripts/guard.gd" id="3_aaq88"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sdykh"]
 bg_color = Color(1, 1, 1, 1)
@@ -20,8 +19,7 @@ bg_color = Color(1, 1, 1, 1)
 [node name="Room" type="Control" unique_id=460679381]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_212wd")
-roomData = ExtResource("2_uibj0")
+script = ExtResource("1_uj218")
 
 [node name="Background" type="ColorRect" parent="." unique_id=1269580317]
 layout_mode = 0
@@ -125,7 +123,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_l5545")
 text = "Porta Direita"
-script = ExtResource("1_l5545")
+script = ExtResource("2_a2si3")
 
 [node name="ProgressBar" type="ProgressBar" parent="DoorRight" unique_id=41760383]
 layout_mode = 1
@@ -151,7 +149,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_l5545")
 text = "Porta Esquerdo"
-script = ExtResource("1_l5545")
+script = ExtResource("2_a2si3")
 
 [node name="ProgressBar" type="ProgressBar" parent="DoorLeft" unique_id=988149139]
 layout_mode = 1
@@ -177,7 +175,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 31
 theme_override_styles/normal = SubResource("StyleBoxFlat_212wd")
 text = "Guarda Direito"
-script = ExtResource("3_e1q4p")
+script = ExtResource("3_aaq88")
 speechBubble = NodePath("../SpeechBubbleRight")
 answerLabel = NodePath("../SpeechBubbleRight/AnswerLabelRight")
 
@@ -191,7 +189,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 31
 theme_override_styles/normal = SubResource("StyleBoxFlat_212wd")
 text = "Guarda Esquerdo"
-script = ExtResource("3_e1q4p")
+script = ExtResource("3_aaq88")
 speechBubble = NodePath("../SpeechBubbleLeft")
 answerLabel = NodePath("../SpeechBubbleLeft/AnswerLabelLeft")
 

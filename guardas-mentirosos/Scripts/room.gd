@@ -6,6 +6,9 @@ var questionAsked = false
 @export var roomData: RoomData
 
 func _ready() -> void:
+	roomData = GameManager.rooms[GameManager.currentRoom - 1]
+	
+	print("SALA ATUAL: ", GameManager.currentRoom)
 	print("PODER AO ENTRAR NA SALA: ", GameManager.playerData.totalPower)
 	
 	$DoorLeft.disabled = true
@@ -60,6 +63,10 @@ func process_door_choice(door) -> void:
 	print("EQUIPAMENTO: ", equipment.equipmentName)
 	print("PODER DO ITEM: ", equipment.power)
 	print("PODER TOTAL: ", GameManager.playerData.totalPower)
+	
+	GameManager.go_to_next_room()
+	print("PRÓXIMA SALA: ", GameManager.currentRoom)
+	GameManager.load_next_room()
 
 func _on_door_left_door_confirmed(door) -> void:
 	process_door_choice(door)
