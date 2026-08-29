@@ -1,13 +1,9 @@
 extends Control
 
-var correctDoor = "DoorLeft"
-var truthGuard = "GuardLeft"
 var selectedQuestion = 0
 var questionAsked = false
 
-@export var questions: Array[QuestionData]
-@export var goodEquipment: EquipmentData
-@export var badEquipment: EquipmentData
+@export var roomData: RoomData
 
 func _ready() -> void:
 	print("PODER AO ENTRAR NA SALA: ", GameManager.playerData.totalPower)
@@ -24,7 +20,7 @@ func select_question(questionNumber: int) -> void:
 	questionAsked = true
 	selectedQuestion = questionNumber
 	
-	var question = questions[questionNumber - 1]
+	var question = roomData.questions[questionNumber - 1]
 	
 	$QuestionPanel/QuestionLabel.text = question.questionText
 	set_guard_answers(question)
@@ -40,7 +36,7 @@ func select_question(questionNumber: int) -> void:
 	$QuestionsPanel/QuestionButton3.disabled = true
 
 func set_guard_answers(question: QuestionData) -> void:
-	if truthGuard == "GuardLeft":
+	if roomData.truthGuard == "GuardLeft":
 		$GuardLeft.set_answer(question.truthfulAnswer)
 		$GuardRight.set_answer(question.liarAnswer)
 	else:
@@ -52,15 +48,14 @@ func process_door_choice(door) -> void:
 	
 	var equipment: EquipmentData
 	
-	if door.name == correctDoor:
+	if door.name == roomData.correctDoor:
 		print("RESULTADO: ACERTOU!")
-		equipment = goodEquipment
+		equipment = roomData.goodEquipment
 	else:
 		print("RESULTADO: ERROU!")
-		equipment = badEquipment
+		equipment = roomData.badEquipment
 	
-	GameManager.playerData.currentEquipment = equipment
-	GameManager.playerData.totalPower += equipment.power
+	GameManager.add_equipment(equipment)
 	
 	print("EQUIPAMENTO: ", equipment.equipmentName)
 	print("PODER DO ITEM: ", equipment.power)
