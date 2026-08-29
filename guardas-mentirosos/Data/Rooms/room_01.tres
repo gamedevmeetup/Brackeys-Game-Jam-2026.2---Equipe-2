@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="RoomData" format=3 uid="uid://183orh5mk4cn"]
 
 [ext_resource type="Script" uid="uid://dh32rvjjscqxg" path="res://Scripts/Data/question_data.gd" id="1_cyykb"]
-[ext_resource type="Resource" uid="uid://dr4trlkf7ci7e" path="res://Data/Equipment/equipment_bad_01.tres" id="1_ed0yw"]
-[ext_resource type="Resource" uid="uid://bb01bre8jvk8w" path="res://Data/Equipment/equipment_good_01.tres" id="2_15wus"]
+[ext_resource type="Resource" uid="uid://dr4trlkf7ci7e" path="res://Data/Equipment/Room1/equipment_bad_01.tres" id="1_ed0yw"]
+[ext_resource type="Resource" uid="uid://bb01bre8jvk8w" path="res://Data/Equipment/Room1/equipment_good_01.tres" id="2_15wus"]
 [ext_resource type="Script" uid="uid://b5gq8lthwb33d" path="res://Scripts/Data/room_data.gd" id="2_nvqmh"]
-[ext_resource type="Resource" uid="uid://tsykmx7v02kw" path="res://Data/Questions/question_01.tres" id="4_yh6af"]
-[ext_resource type="Resource" uid="uid://dmtdfvmekw1gl" path="res://Data/Questions/question_02.tres" id="5_0e305"]
-[ext_resource type="Resource" uid="uid://cc0k8m22y6fjv" path="res://Data/Questions/question_03.tres" id="6_lg4rf"]
+[ext_resource type="Resource" uid="uid://tsykmx7v02kw" path="res://Data/Questions/Room1/question_01.tres" id="4_yh6af"]
+[ext_resource type="Resource" uid="uid://dmtdfvmekw1gl" path="res://Data/Questions/Room1/question_02.tres" id="5_0e305"]
+[ext_resource type="Resource" uid="uid://cc0k8m22y6fjv" path="res://Data/Questions/Room1/question_03.tres" id="6_lg4rf"]
 
 [resource]
 script = ExtResource("2_nvqmh")

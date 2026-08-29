@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuestionData" format=3 uid="uid://ce1msbppjke7w"]
+
+[ext_resource type="Script" uid="uid://dh32rvjjscqxg" path="res://Scripts/Data/question_data.gd" id="1_6em58"]
+
+[resource]
+script = ExtResource("1_6em58")
+questionText = "Se o seu colega me dissesse que você fala a verdade, qual porta você apontaria para o item bom?"
+truthfulAnswer = "Eu apontaria a Porta Direita, mas só se você preencher e assinar o 'Termo de Isenção de Responsabilidade por Queimaduras de Dragão' na mesa 4."
+liarAnswer = "Eu apontaria a Porta Esquerda, porque meu maior dever cívico é garantir que heróis derrotem répteis gigantes."
+metadata/_custom_type_script = "uid://dh32rvjjscqxg"

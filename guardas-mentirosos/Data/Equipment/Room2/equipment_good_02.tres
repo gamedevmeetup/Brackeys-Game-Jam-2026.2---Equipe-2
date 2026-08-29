@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EquipmentData" format=3 uid="uid://cg04ju10ldnjn"]
+
+[ext_resource type="Script" uid="uid://vf18gl203r31" path="res://Scripts/Data/equipment_data.gd" id="1_f4jos"]
+
+[resource]
+script = ExtResource("1_f4jos")
+equipmentName = "Machado do Guardião"
+description = "Um machado pesado usado pelos antigos guardiões da dungeon. A lâmina ainda conserva o fio e parece capaz de atravessar até escamas de dragão."
+power = 15
+metadata/_custom_type_script = "uid://vf18gl203r31"

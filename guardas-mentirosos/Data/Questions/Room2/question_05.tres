@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuestionData" format=3 uid="uid://b7n2loo6m6ing"]
+
+[ext_resource type="Script" uid="uid://dh32rvjjscqxg" path="res://Scripts/Data/question_data.gd" id="1_a88my"]
+
+[resource]
+script = ExtResource("1_a88my")
+questionText = "Qual porta o seu colega diria para eu evitar se ele quisesse me ajudar contra o dragão?"
+truthfulAnswer = "Ele apontaria a Porta Esquerda como a sucata, o que só prova que ele nunca leu o manifesto de carga que o Rei Dragão mandou assinar."
+liarAnswer = "Ele juraria pela própria armadura que a Porta Esquerda só tem lixo. Um sujeito trágico com péssimo gosto, se quer minha opinião."
+metadata/_custom_type_script = "uid://dh32rvjjscqxg"

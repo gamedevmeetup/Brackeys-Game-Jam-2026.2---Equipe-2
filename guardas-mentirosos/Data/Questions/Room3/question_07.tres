@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuestionData" format=3 uid="uid://cvarjnx15iihh"]
+
+[ext_resource type="Script" uid="uid://dh32rvjjscqxg" path="res://Scripts/Data/question_data.gd" id="1_an7bg"]
+
+[resource]
+script = ExtResource("1_an7bg")
+questionText = "Se eu perguntasse ao seu colega qual porta leva a sucata, qual ele diria que não é?"
+truthfulAnswer = "Ele diria que a Porta Esquerda não é o lixo. E depois ele reclamaria que nós não recebemos hora extra para prestar consultoria de armaduras."
+liarAnswer = "Ele diria que a Porta Esquerda não é o lixo, porque ele é o fiscal de controle de qualidade e quer te ver brilhando na cutscene."
+metadata/_custom_type_script = "uid://dh32rvjjscqxg"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuestionData" format=3 uid="uid://cnn1ramt7xg4e"]
+
+[ext_resource type="Script" uid="uid://dh32rvjjscqxg" path="res://Scripts/Data/question_data.gd" id="1_t040w"]
+
+[resource]
+script = ExtResource("1_t040w")
+questionText = "Qual porta o manual de Recursos Humanos recomenda que eu abra para ter chances contra o dragão?"
+truthfulAnswer = "A Porta Direita. Mas o manual também diz que, em caso de incineração, você deve recolher as próprias cinzas numa pá para não sujar o saguão."
+liarAnswer = "A Porta Esquerda! A gerência investiu pesado no seu sucesso e deixou uma espada lá que praticamente corta fogo."
+metadata/_custom_type_script = "uid://dh32rvjjscqxg"

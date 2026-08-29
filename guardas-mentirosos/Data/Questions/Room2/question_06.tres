@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuestionData" format=3 uid="uid://cl8xmuppxn080"]
+
+[ext_resource type="Script" uid="uid://dh32rvjjscqxg" path="res://Scripts/Data/question_data.gd" id="1_w1iag"]
+
+[resource]
+script = ExtResource("1_w1iag")
+questionText = "Se o seu colega tivesse que escolher a sucata, qual você diria que ele escolheria?"
+truthfulAnswer = "A Porta Direita, óbvio, porque ele acha que cota de malha enferrujada evita tétano. E eu não vou corrigi-lo."
+liarAnswer = "A Porta Esquerda, porque ele tem um fetiche estranho por escudos feitos de casca de árvore."
+metadata/_custom_type_script = "uid://dh32rvjjscqxg"

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="RoomData" format=3 uid="uid://cmtnrja63sk5u"]
+
+[ext_resource type="Script" uid="uid://dh32rvjjscqxg" path="res://Scripts/Data/question_data.gd" id="1_1igf8"]
+[ext_resource type="Resource" uid="uid://dxvuijo0v5ipm" path="res://Data/Equipment/Room2/equipment_bad_02.tres" id="1_vlkg2"]
+[ext_resource type="Resource" uid="uid://cg04ju10ldnjn" path="res://Data/Equipment/Room2/equipment_good_02.tres" id="2_8jls2"]
+[ext_resource type="Script" uid="uid://b5gq8lthwb33d" path="res://Scripts/Data/room_data.gd" id="2_yus1v"]
+[ext_resource type="Resource" uid="uid://cshal5t1dyiye" path="res://Data/Questions/Room2/question_04.tres" id="4_si2mf"]
+[ext_resource type="Resource" uid="uid://b7n2loo6m6ing" path="res://Data/Questions/Room2/question_05.tres" id="5_r78a3"]
+[ext_resource type="Resource" uid="uid://cl8xmuppxn080" path="res://Data/Questions/Room2/question_06.tres" id="6_g4ms1"]
+
+[resource]
+script = ExtResource("2_yus1v")
+correctDoor = "DoorLeft"
+truthGuard = "GuardLeft"
+questions = Array[ExtResource("1_1igf8")]([ExtResource("4_si2mf"), ExtResource("5_r78a3"), ExtResource("6_g4ms1")])
+goodEquipment = ExtResource("2_8jls2")
+badEquipment = ExtResource("1_vlkg2")
+metadata/_custom_type_script = "uid://b5gq8lthwb33d"
