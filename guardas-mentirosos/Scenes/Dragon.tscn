@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://b575veb8c5g24"]
 
+[ext_resource type="Script" uid="uid://d1wmmanrylk1l" path="res://Scripts/dragon.gd" id="1_v5fnx"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ow8y5"]
 bg_color = Color(0.93333334, 0.10980392, 0.023529412, 1)
 
@@ -13,13 +15,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_v5fnx")
 
 [node name="Background" type="ColorRect" parent="." unique_id=1377610927]
 layout_mode = 0
 offset_right = 1915.0
 offset_bottom = 1077.0
 
-[node name="Panel" type="Panel" parent="." unique_id=541363746]
+[node name="Dragon" type="Panel" parent="." unique_id=541363746]
 layout_mode = 0
 offset_left = 616.0
 offset_top = 328.0
@@ -29,26 +32,27 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_ow8y5")
 
 [node name="ResultPanel" type="Panel" parent="." unique_id=954202910]
 layout_mode = 0
-offset_left = 127.0
-offset_top = 54.0
-offset_right = 455.0
-offset_bottom = 258.0
+offset_left = 756.0
+offset_top = 80.0
+offset_right = 1084.0
+offset_bottom = 284.0
 
 [node name="ResultTitle" type="Label" parent="ResultPanel" unique_id=421200685]
 layout_mode = 0
-offset_left = 61.0
-offset_top = 13.0
-offset_right = 280.0
-offset_bottom = 67.0
+offset_left = 69.0
+offset_top = 18.0
+offset_right = 288.0
+offset_bottom = 72.0
 theme_override_font_sizes/font_size = 32
-text = "Poder Total:"
+text = "O DRAGÃO"
 
 [node name="ResultDescription" type="Label" parent="ResultPanel" unique_id=1848542070]
 layout_mode = 0
-offset_left = 54.0
-offset_top = 74.0
-offset_right = 259.0
-offset_bottom = 174.0
+offset_left = 39.0
+offset_top = 96.0
+offset_right = 290.0
+offset_bottom = 125.0
+text = "Você chegou ao fim da dungeon!"
 
 [node name="ContinueButton" type="Button" parent="." unique_id=790823436]
 layout_mode = 0
@@ -56,4 +60,6 @@ offset_left = 1597.0
 offset_top = 933.0
 offset_right = 1822.0
 offset_bottom = 1021.0
+theme_override_font_sizes/font_size = 27
 theme_override_styles/normal = SubResource("StyleBoxFlat_v5fnx")
+text = "Continuar"
