@@ -16,6 +16,12 @@ bg_color = Color(0.015686275, 0.6666667, 1, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e1q4p"]
 bg_color = Color(1, 1, 1, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uj218"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a2si3"]
+bg_color = Color(0, 0.64406997, 0.9202046, 1)
+
 [node name="Room" type="Control" unique_id=460679381]
 layout_mode = 3
 anchors_preset = 0
@@ -230,6 +236,51 @@ offset_bottom = 120.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 23
 text = "	Resposta do Guarda Direito"
+
+[node name="EquipmentPanel" type="Panel" parent="." unique_id=2137212130]
+visible = false
+layout_mode = 0
+offset_left = 464.0
+offset_top = 276.0
+offset_right = 1542.0
+offset_bottom = 823.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_uj218")
+
+[node name="EquipmentTitle" type="Label" parent="EquipmentPanel" unique_id=968813743]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 24.0
+offset_right = 1075.0
+offset_bottom = 92.0
+
+[node name="EquipmentName" type="Label" parent="EquipmentPanel" unique_id=635636186]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 124.0
+offset_right = 350.0
+offset_bottom = 219.0
+
+[node name="EquipmentPower" type="Label" parent="EquipmentPanel" unique_id=1570847922]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 234.0
+offset_right = 264.0
+offset_bottom = 295.0
+
+[node name="TotalPower" type="Label" parent="EquipmentPanel" unique_id=989043917]
+layout_mode = 0
+offset_top = 432.0
+offset_right = 284.0
+offset_bottom = 546.0
+
+[node name="ContinueButton" type="Button" parent="EquipmentPanel" unique_id=1866674441]
+layout_mode = 0
+offset_left = 908.0
+offset_top = 480.0
+offset_right = 1079.0
+offset_bottom = 548.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_a2si3")
+text = "Continue"
 
 [connection signal="pressed" from="QuestionsPanel/QuestionButton1" to="." method="_on_question_button_1_pressed"]
 [connection signal="pressed" from="QuestionsPanel/QuestionButton3" to="." method="_on_question_button_3_pressed"]
