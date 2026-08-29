@@ -22,3 +22,5 @@ func go_to_next_room() -> void:
 func load_next_room() -> void:
 	if currentRoom <= rooms.size():
 		get_tree().change_scene_to_file("res://Scenes/Room.tscn")
+	else:
+		get_tree().change_scene_to_file("res://Scenes/Dragon.tscn")
