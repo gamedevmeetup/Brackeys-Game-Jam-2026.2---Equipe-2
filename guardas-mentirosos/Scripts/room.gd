@@ -10,6 +10,8 @@ var questionAsked = false
 @export var badEquipment: EquipmentData
 
 func _ready() -> void:
+	print("PODER AO ENTRAR NA SALA: ", GameManager.playerData.totalPower)
+	
 	$DoorLeft.disabled = true
 	$DoorRight.disabled = true
 	$DoorLeft/ProgressBar.value = 0
@@ -57,8 +59,12 @@ func process_door_choice(door) -> void:
 		print("RESULTADO: ERROU!")
 		equipment = badEquipment
 	
+	GameManager.playerData.currentEquipment = equipment
+	GameManager.playerData.totalPower += equipment.power
+	
 	print("EQUIPAMENTO: ", equipment.equipmentName)
-	print("PODER: ", equipment.power)
+	print("PODER DO ITEM: ", equipment.power)
+	print("PODER TOTAL: ", GameManager.playerData.totalPower)
 
 func _on_door_left_door_confirmed(door) -> void:
 	process_door_choice(door)
