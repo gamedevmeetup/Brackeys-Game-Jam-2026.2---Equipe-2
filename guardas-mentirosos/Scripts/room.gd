@@ -16,6 +16,8 @@ func _ready() -> void:
 	$DoorRight.disabled = true
 	$DoorLeft/ProgressBar.value = 0
 	$DoorRight/ProgressBar.value = 0
+	
+	update_question_buttons()
 
 func select_question(questionNumber: int) -> void:
 	if questionAsked:
@@ -63,9 +65,15 @@ func process_door_choice(door) -> void:
 	if door.name == roomData.correctDoor:
 		print("RESULTADO: ACERTOU!")
 		equipment = roomData.goodEquipment
+	
+		$EquipmentPanel/EquipmentTitle.text = "EQUIPAMENTO DE QUALIDADE!"
+		$EquipmentPanel/EquipmentDescription.text = "Você fez a escolha certa e encontrou um equipamento poderoso."
 	else:
 		print("RESULTADO: ERROU!")
 		equipment = roomData.badEquipment
+	
+		$EquipmentPanel/EquipmentTitle.text = "EQUIPAMENTO DEFEITUOSO!"
+		$EquipmentPanel/EquipmentDescription.text = "Você escolheu a porta errada e encontrou um equipamento inferior."
 	
 	GameManager.add_equipment(equipment)
 	
@@ -73,9 +81,11 @@ func process_door_choice(door) -> void:
 	print("PODER DO ITEM: ", equipment.power)
 	print("PODER TOTAL: ", GameManager.playerData.totalPower)
 	
-	GameManager.go_to_next_room()
-	print("PRÓXIMA SALA: ", GameManager.currentRoom)
-	GameManager.load_next_room()
+	$EquipmentPanel/EquipmentName.text = equipment.equipmentName
+	$EquipmentPanel/EquipmentPower.text = "Poder: +" + str(equipment.power)
+	$EquipmentPanel/TotalPower.text = "Poder total: " + str(GameManager.playerData.totalPower)
+
+	$EquipmentPanel.show()
 
 func _on_door_left_door_confirmed(door) -> void:
 	process_door_choice(door)
@@ -94,3 +104,16 @@ func _on_question_button_2_pressed() -> void:
 func _on_question_button_3_pressed() -> void:
 	select_question(3)
 	print("Pergunta escolhida: ", selectedQuestion)
+
+func _on_continue_button_pressed() -> void:
+	GameManager.go_to_next_room()
+	GameManager.load_next_room()
+
+func update_question_buttons() -> void:
+	if roomData.questions.size() < 3:
+		print("ERRO: A sala não possui 3 perguntas configuradas.")
+		return
+	
+	$QuestionsPanel/QuestionButton1.text = roomData.questions[0].questionText
+	$QuestionsPanel/QuestionButton2.text = roomData.questions[1].questionText
+	$QuestionsPanel/QuestionButton3.text = roomData.questions[2].questionText
