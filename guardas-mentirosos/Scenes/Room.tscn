@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://cdlr7m4nqp1a3"]
 
 [ext_resource type="Script" uid="uid://dfgcq16qoxm5b" path="res://Scripts/room.gd" id="1_uj218"]
+[ext_resource type="Texture2D" uid="uid://g6hinwiy3ff3" path="res://Art/Cenarios/Game Jam- Medieval.pdf (2).png" id="2_7gm67"]
 [ext_resource type="Script" uid="uid://dbjvraml4ukps" path="res://Scripts/door.gd" id="2_a2si3"]
 [ext_resource type="Script" uid="uid://17nc33sjhqee" path="res://Scripts/guard.gd" id="3_aaq88"]
+[ext_resource type="Texture2D" uid="uid://cq80itqntsk8t" path="res://Art/Personagens/guardas/guarda1.png" id="4_xebr5"]
+[ext_resource type="Texture2D" uid="uid://bx6rwtug0iwy8" path="res://Art/Personagens/guardas/guarda2.png" id="6_si31g"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sdykh"]
 bg_color = Color(1, 1, 1, 1)
@@ -10,8 +13,11 @@ bg_color = Color(1, 1, 1, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l5545"]
 bg_color = Color(0.99215686, 0.81960785, 0.023529412, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_212wd"]
-bg_color = Color(0.015686275, 0.6666667, 1, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mimag"]
+texture = ExtResource("4_xebr5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ijr7e"]
+texture = ExtResource("6_si31g")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e1q4p"]
 bg_color = Color(1, 1, 1, 1)
@@ -27,11 +33,12 @@ layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_uj218")
 
-[node name="Background" type="ColorRect" parent="." unique_id=1269580317]
+[node name="Background" type="TextureRect" parent="." unique_id=115040027]
 layout_mode = 0
-offset_right = 1922.0
+offset_right = 1921.7778
 offset_bottom = 1081.0
-color = Color(0.2036809, 0.20368093, 0.2036809, 1)
+texture = ExtResource("2_7gm67")
+expand_mode = 1
 
 [node name="QuestionPanel" type="Panel" parent="." unique_id=1328138082]
 layout_mode = 0
@@ -124,10 +131,10 @@ metadata/_edit_use_anchors_ = true
 
 [node name="DoorRight" type="Button" parent="." unique_id=601431603]
 layout_mode = 0
-offset_left = 1062.0
-offset_top = 298.0
-offset_right = 1296.0
-offset_bottom = 747.0
+offset_left = 1019.0
+offset_top = 223.0
+offset_right = 1253.0
+offset_bottom = 672.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_l5545")
@@ -150,10 +157,10 @@ metadata/_edit_use_anchors_ = true
 
 [node name="DoorLeft" type="Button" parent="." unique_id=600588619]
 layout_mode = 0
-offset_left = 688.0
-offset_top = 298.0
-offset_right = 922.0
-offset_bottom = 747.0
+offset_left = 765.0
+offset_top = 226.0
+offset_right = 999.0
+offset_bottom = 675.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_l5545")
@@ -176,28 +183,26 @@ metadata/_edit_use_anchors_ = true
 
 [node name="GuardRight" type="Button" parent="." unique_id=1027485856 node_paths=PackedStringArray("speechBubble", "answerLabel")]
 layout_mode = 0
-offset_left = 1223.0
-offset_top = 555.0
-offset_right = 1520.0
-offset_bottom = 820.0
+offset_left = 1102.0
+offset_top = 386.8182
+offset_right = 1414.0
+offset_bottom = 869.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 31
-theme_override_styles/normal = SubResource("StyleBoxFlat_212wd")
-text = "Guarda Direito"
+theme_override_styles/normal = SubResource("StyleBoxTexture_mimag")
 script = ExtResource("3_aaq88")
 speechBubble = NodePath("../SpeechBubbleRight")
 answerLabel = NodePath("../SpeechBubbleRight/AnswerLabelRight")
 
 [node name="GuardLeft" type="Button" parent="." unique_id=1964884612 node_paths=PackedStringArray("speechBubble", "answerLabel")]
 layout_mode = 0
-offset_left = 467.0
-offset_top = 555.0
-offset_right = 764.0
-offset_bottom = 820.0
+offset_left = 550.0
+offset_top = 397.0
+offset_right = 869.0
+offset_bottom = 867.6869
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 31
-theme_override_styles/normal = SubResource("StyleBoxFlat_212wd")
-text = "Guarda Esquerdo"
+theme_override_styles/normal = SubResource("StyleBoxTexture_ijr7e")
 script = ExtResource("3_aaq88")
 speechBubble = NodePath("../SpeechBubbleLeft")
 answerLabel = NodePath("../SpeechBubbleLeft/AnswerLabelLeft")
