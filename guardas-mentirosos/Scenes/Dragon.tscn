@@ -54,7 +54,7 @@ offset_right = 290.0
 offset_bottom = 125.0
 text = "Você chegou ao fim da dungeon!"
 
-[node name="ContinueButton" type="Button" parent="." unique_id=790823436]
+[node name="RestartButton" type="Button" parent="." unique_id=790823436]
 layout_mode = 0
 offset_left = 1597.0
 offset_top = 933.0
@@ -62,4 +62,17 @@ offset_right = 1822.0
 offset_bottom = 1021.0
 theme_override_font_sizes/font_size = 27
 theme_override_styles/normal = SubResource("StyleBoxFlat_v5fnx")
-text = "Continuar"
+text = "REINICIAR"
+
+[node name="MenuButton" type="Button" parent="." unique_id=1217794777]
+layout_mode = 0
+offset_left = 1331.0
+offset_top = 933.0
+offset_right = 1556.0
+offset_bottom = 1021.0
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxFlat_v5fnx")
+text = "MENU"
+
+[connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
