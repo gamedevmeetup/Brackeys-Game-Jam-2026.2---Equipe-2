@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cax51gjcxynbc"
+path="res://.godot/imported/item pego.mp3-c83187e4104a94fd015f9ff34b94e7e4.mp3str"
+
+[deps]
+
+source_file="res://Sound/item pego.mp3"
+dest_files=["res://.godot/imported/item pego.mp3-c83187e4104a94fd015f9ff34b94e7e4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

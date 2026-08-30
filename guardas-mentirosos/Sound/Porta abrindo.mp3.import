@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dhswwm2txxvaa"
+path="res://.godot/imported/Porta abrindo.mp3-f9f5b7a3e68140dcc197916b48006338.mp3str"
+
+[deps]
+
+source_file="res://Sound/Porta abrindo.mp3"
+dest_files=["res://.godot/imported/Porta abrindo.mp3-f9f5b7a3e68140dcc197916b48006338.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
